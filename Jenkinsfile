@@ -44,14 +44,14 @@ pipeline {
 				//def
 				nexusArtifactUploader artifacts:[
 					[
-						artifactId:'Sample-Mobile-Application',
+						artifactId:'spring-boot-starter-parent',
 						classifier:'',
-						file:"target/Sample-Mobile-Application-${mavenPom.version}.jar",
+						file:"target/spring-boot-starter-parent-${mavenPom.version}.jar",
 						type:'jar'
 					]
 				],
 				credentialsId:NEXUS_CREDENTIAL_ID,
-				groupId:'com.cg.sma',
+				groupId:'org.springframework.boot',
 				nexusUrl:NEXUS_URL,
 				nexusVersion:NEXUS_VERSION,
 				protocol:'http',
