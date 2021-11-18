@@ -9,8 +9,10 @@ pipeline {
     }
   stages {	
 	stage('Checkout'){
-		checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/NikhilReddii/sample-java-app.git']]])
-	}
+		steps{
+			checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/NikhilReddii/sample-java-app.git']]])
+		     }
+		}
 	stage('Build'){
 		steps{
 			bat 'mvn compile'
