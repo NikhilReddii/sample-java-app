@@ -48,7 +48,7 @@ pipeline {
 					[
 						artifactId:'spring-boot-starter-parent',
 						classifier:'',
-						file:"target/spring-boot-starter-parent-${mavenPom.version}.jar",
+						file:"target/sample-${mavenPom.version}.jar",
 						type:'jar'
 					]
 				],
